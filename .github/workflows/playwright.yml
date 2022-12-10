@@ -20,13 +20,13 @@ jobs:
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-      name: index.html
-      path: playwright-report/
+        name: index.html
+        path: playwright-report/
     - name: Deploy to pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-      publish_branch: gh-pages
-      publish_dir: playwright-report
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: playwright-report
         
