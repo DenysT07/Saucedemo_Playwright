@@ -29,6 +29,11 @@
     "playwright-lighthouse": "^2.2.2"
   },
   "dependencies": {
+    "@playwright/test": "^1.28.1",
+    "@types/mocha": "^10.0.1",
+    "lighthouse": "^9.6.8",
+    "playwright": "^1.28.1",
+    "playwright-lighthouse": "^2.2.2",
     "chromium": "^3.0.3",
     "describe": "^1.2.0",
     "get-port": "^6.1.2",
