@@ -1,0 +1,39 @@
+{
+  "name": "saucedemo_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_headed": "npx playwright test --headed",
+    "test": "npx playwright test ",
+    "accessibility_report": "start ./audit_report/accessibility_report.html",
+    "afterLoginPerformance_report": "start ./audit_report/afterLoginPerformance_report.html",
+    "homePerformance_report.html": "start ./audit_report/homePerformance_report.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenysT07/Saucedemo_Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenysT07/Saucedemo_Playwright/issues"
+  },
+  "homepage": "https://github.com/DenysT07/Saucedemo_Playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.28.1",
+    "@types/mocha": "^10.0.1",
+    "lighthouse": "^9.6.8",
+    "playwright": "^1.28.1",
+    "playwright-lighthouse": "^2.2.2"
+  },
+  "dependencies": {
+    "chromium": "^3.0.3",
+    "describe": "^1.2.0",
+    "get-port": "^6.1.2",
+    "path": "^0.12.7",
+    "random-string": "^0.2.0",
+    "static-server": "^2.2.1"
+  }
+}
