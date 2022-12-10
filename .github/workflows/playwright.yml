@@ -16,7 +16,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: instal
-      run: brew install node
+      run: sudo npm install --unsafe-perm=true --allow-root
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v3
