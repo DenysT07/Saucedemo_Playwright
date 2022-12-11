@@ -14,7 +14,7 @@ test.describe('audit', () => {
   // test.use({
   //   storageState: "./auth.json"
   // })
-  test('Accessibility audit', async ({ playwright }) => {
+  test('shoud pass audit Accessibility test', async ({ playwright }) => {
     const userDataDir = path.join(os.tmpdir(), '..', String(Math.random()));
     const context = await chromium.launchPersistentContext(userDataDir, {
       args: ['--remote-debugging-port=9222'],
