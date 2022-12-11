@@ -10,11 +10,11 @@ const path = require('path');
 
 
 
-test.describe('audit example', () => {
+test.describe('audit', () => {
   // test.use({
   //   storageState: "./auth.json"
   // })
-  test('open browser', async ({ playwright }) => {
+  test('After login performance audit', async ({ playwright }) => {
     const userDataDir = path.join(os.tmpdir(), '..', String(Math.random()));
     const context = await chromium.launchPersistentContext(userDataDir, {
       args: ['--remote-debugging-port=9223'],
