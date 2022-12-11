@@ -11,9 +11,7 @@ const path = require('path');
 
 
 test.describe('audit', () => {
-  // test.use({
-  //   storageState: "./auth.json"
-  // })
+
   test('shoud pass audit Accessibility test', async ({ playwright }) => {
     const userDataDir = path.join(os.tmpdir(), '..', String(Math.random()));
     const context = await chromium.launchPersistentContext(userDataDir, {
@@ -22,7 +20,7 @@ test.describe('audit', () => {
 
 
     const page = await context.newPage();
-    await page.goto('https://www.saucedemo.com/inventory.html');
+    await page.goto('/');
     const loginPage = new LoginPage(page)
     await loginPage.userNameFill(userData.standart)
     await loginPage.userPasswordFill(userData.correctPassword)
@@ -42,8 +40,8 @@ test.describe('audit', () => {
         formats: {
           html: true
         },
-        name: `accessibility_report`, //defaults to `lighthouse-${new Date().getTime()}`
-        directory: `./audit_report`, //defaults to `${process.cwd()}/lighthouse`
+        name: `accessibility_report`, 
+        directory: `./audit_report`, 
       },
     });
 

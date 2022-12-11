@@ -9,9 +9,7 @@ const path = require('path');
 
 
 test.describe('audit', () => {
-  // test.use({
-  //   storageState: "./auth.json"
-  // })
+ 
   test('shoud pass audit Home page performance test', async ({ playwright }) => {
     const userDataDir = path.join(os.tmpdir(), '..', String(Math.random()));
     const context = await chromium.launchPersistentContext(userDataDir, {
@@ -34,8 +32,8 @@ test.describe('audit', () => {
         formats: {
           html: true
         },
-        name: `homePerformance_report`, //defaults to `lighthouse-${new Date().getTime()}`
-        directory: `./audit_report`, //defaults to `${process.cwd()}/lighthouse`
+        name: `homePerformance_report`, 
+        directory: `./audit_report`, 
       },
     });
 
