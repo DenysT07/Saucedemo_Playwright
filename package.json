@@ -8,7 +8,7 @@
     "test": "npx playwright test ",
     "accessibility_report": "start ./audit_report/accessibility_report.html",
     "afterLoginPerformance_report": "start ./audit_report/afterLoginPerformance_report.html",
-    "homePerformance_report.html": "start ./audit_report/homePerformance_report.html"
+    "homePerformance_report": "start ./audit_report/homePerformance_report.html"
   },
   "repository": {
     "type": "git",
