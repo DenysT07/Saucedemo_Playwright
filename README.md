@@ -26,19 +26,19 @@ npx playwright show-report
 ```console
 npm run accessibility_report
 ```
-Or follow [this link](https://denyst07.github.io/Saucedemo_Playwright/audit_report/accessibility_report.html/).
+Or follow [this link](https://denyst07.github.io/Saucedemo_Playwright/audit_report/accessibility_report.html).
 
 ## To open an after Login Performanceaudit report run:
 ```console
 npm run afterLoginPerformance_report
 ```
-Or follow [this link](https://denyst07.github.io/Saucedemo_Playwright/audit_report/afterLoginPerformance_report.html/).
+Or follow [this link](https://denyst07.github.io/Saucedemo_Playwright/audit_report/afterLoginPerformance_report.html).
 
 ## To open a home page Performance audit report run:
 ```console
 npm run homePerformance_report
 ```
-Or follow [this link](https://denyst07.github.io/Saucedemo_Playwright/audit_report/homePerformance_report.html/).
+Or follow [this link](https://denyst07.github.io/Saucedemo_Playwright/audit_report/homePerformance_report.html).
 
 # Example of Lighthouse audit report
 
