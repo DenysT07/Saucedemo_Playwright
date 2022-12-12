@@ -1,12 +1,8 @@
 import test from "@playwright/test";
 const os = require('os');
 const { playAudit } = require('playwright-lighthouse');
-const playwright = require('playwright');
-const { chromium } = require('playwright');
+const {playwright, chromium} = require('playwright');
 const path = require('path');
-
-
-
 
 test.describe('audit', () => {
  
@@ -15,11 +11,8 @@ test.describe('audit', () => {
     const context = await chromium.launchPersistentContext(userDataDir, {
       args: ['--remote-debugging-port=9221'],
     });
-
-
     const page = await context.newPage();
-
-
+    
     await playAudit({
       disableStorageReset: true,
       url: 'https://www.saucedemo.com',
@@ -33,7 +26,7 @@ test.describe('audit', () => {
           html: true
         },
         name: `homePerformance_report`, 
-        directory: `./audit_report`, 
+        directory: `./playwright-report/audit_report`, 
       },
     });
 

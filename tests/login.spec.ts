@@ -1,13 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { userData } from '../helper/loginData';
 import LoginPage from '../pages/loginPage';
-const { playAudit } = require('playwright-lighthouse');
 const playwright = require('playwright');
-import perfConfig from 'lighthouse/lighthouse-core/config/perf-config.js';
-
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://www.saucedemo.com/');
+  await page.goto('/');
 });
 
 test.describe('Login Test', () => {
@@ -63,6 +60,5 @@ test.describe('Login Test', () => {
     await loginPage.userPasswordFill(userData.incorrectPassword)
     await loginPage.loginButtonClick()
     await loginPage.expectErrorToHaveText('Epic sadface: Username and password do not match any user in this service')
-
   });
 });

@@ -1,14 +1,10 @@
 import test from "@playwright/test";
 const os = require('os');
 const { playAudit } = require('playwright-lighthouse');
-const playwright = require('playwright');
+const {playwright, chromium} = require('playwright');
+const path = require('path');
 import { userData } from '../helper/loginData';
 import LoginPage from '../pages/loginPage';
-const { chromium } = require('playwright');
-const path = require('path');
-
-
-
 
 test.describe('audit', () => {
 
@@ -18,7 +14,7 @@ test.describe('audit', () => {
       args: ['--remote-debugging-port=9222'],
     });
 
-
+    // const base
     const page = await context.newPage();
     await page.goto('/');
     const loginPage = new LoginPage(page)
@@ -41,7 +37,7 @@ test.describe('audit', () => {
           html: true
         },
         name: `accessibility_report`, 
-        directory: `./audit_report`, 
+        directory: `./playwright-report/audit_report`, 
       },
     });
 

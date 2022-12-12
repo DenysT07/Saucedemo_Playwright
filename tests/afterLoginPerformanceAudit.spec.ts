@@ -1,14 +1,10 @@
 import test from "@playwright/test";
 const os = require('os');
 const { playAudit } = require('playwright-lighthouse');
-const playwright = require('playwright');
+const {playwright, chromium} = require('playwright');
+const path = require('path');
 import { userData } from '../helper/loginData';
 import LoginPage from '../pages/loginPage';
-const { chromium } = require('playwright');
-const path = require('path');
-
-
-
 
 test.describe('audit', () => {
 
@@ -41,7 +37,7 @@ test.describe('audit', () => {
           html: true
         },
         name: `afterLoginPerformance_report`,
-        directory: `./audit_report`, 
+        directory: `./playwright-report/audit_report`, 
       },
     });
 
