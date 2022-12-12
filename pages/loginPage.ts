@@ -12,6 +12,10 @@ export default class LoginPage{
     constructor(public page: Page){
     }
 
+    async goToBaseURL(){
+        await this.page.goto('/')
+    }
+
     async userNameFill(value: string){
         await this.page.locator(userNameFieldLoc).fill(value);
     }

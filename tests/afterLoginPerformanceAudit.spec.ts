@@ -13,8 +13,7 @@ test.describe('audit', () => {
     const context = await chromium.launchPersistentContext(userDataDir, {
       args: ['--remote-debugging-port=9223'],
     });
-
-
+    
     const page = await context.newPage();
     await page.goto('/');
     const loginPage = new LoginPage(page)

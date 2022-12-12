@@ -35,4 +35,6 @@ npm run afterLoginPerformance_report
 ```console
 npm run homePerformance_report
 ```
-![Example of Lighthouse audit report](https://i.imgur.com/5aNWkhe.png)
+# Example of Lighthouse audit report
+
+![report](https://i.imgur.com/5aNWkhe.png)
